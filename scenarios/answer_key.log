@@ -1,0 +1,3 @@
+{('federal', True): 463, ('california', True): 463, ('seattle', True): 463, ('federal', False): 137, ('california', False): 137, ('seattle', False): 137}
+solver schedules failing the checker: 0
+timeouts without a solution: 0

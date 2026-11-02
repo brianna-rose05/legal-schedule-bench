@@ -118,6 +118,8 @@ def main():
         for i in inst:
             if i not in done:
                 jobs.append((model, fn, i))
+    # interleave models so one slow model does not hold up the others
+    random.Random(11).shuffle(jobs)
     print(f"{len(jobs)} calls to make")
 
     def work(job):
@@ -137,7 +139,9 @@ def main():
         return work(job)
 
     with cf.ThreadPoolExecutor(a.workers) as ex:
-        for out in ex.map(guarded, jobs):
+        futs = [ex.submit(guarded, j) for j in jobs]
+        for fut in cf.as_completed(futs):
+            out = fut.result()
             if out is None:
                 continue
             fn, res = out

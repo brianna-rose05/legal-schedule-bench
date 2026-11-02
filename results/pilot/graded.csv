@@ -1,0 +1,217 @@
+model,business_id,level,type,ruleset,format,feasible,reply,outcome,violations,n_violations,premium_usd,labor_cost,best_cost,over_best,cost_usd,prompt_tokens,completion_tokens,reasoning_tokens,seconds,finish
+anthropic/claude-haiku-5.5,B501,1,quick-service restaurant,federal,table,False,impossible,correct_impossible,,,,,,,0.0006102,1187,983,879,6.2,stop
+anthropic/claude-haiku-5.5,B501,1,quick-service restaurant,california,messages,False,impossible,correct_impossible,,,,,,,0.0012793,1423,2274,2164,10.4,stop
+anthropic/claude-haiku-5.5,B501,1,quick-service restaurant,seattle,table,False,impossible,correct_impossible,,,,,,,0.0006894,1274,1124,1029,6.7,stop
+anthropic/claude-haiku-5.5,B502,2,retail,federal,messages,False,impossible,correct_impossible,,,,,,,0.0029011,1731,5456,5314,23.9,stop
+anthropic/claude-haiku-5.5,B502,2,retail,california,table,False,impossible,correct_impossible,,,,,,,0.0028252,1932,5264,5119,22.5,stop
+anthropic/claude-haiku-5.5,B502,2,retail,seattle,messages,False,impossible,correct_impossible,,,,,,,0.0027443,1818,5125,5015,22.8,stop
+anthropic/claude-haiku-5.5,B503,3,cafe,federal,table,True,schedule,legal,,0,0,3743.0,3586.5,156.5,0.0083033,2098,16187,15819,63.4,stop
+anthropic/claude-haiku-5.5,B503,3,cafe,california,messages,True,schedule,legal,,0,0,3679.5,3586.5,93.0,0.0084857,2387,16494,16027,64.1,stop
+anthropic/claude-haiku-5.5,B503,3,cafe,seattle,table,True,schedule,legal,,0,0,3706.5,3594.5,112.0,0.009155,2185,17873,17495,69.8,stop
+anthropic/claude-haiku-5.5,B504,4,retail,federal,messages,True,unusable,unusable,,,,,,,0.0123156,3156,24000,24000,92.6,length
+anthropic/claude-haiku-5.5,B504,4,retail,california,table,True,unusable,unusable,,,,,,,0.0123197,3197,24000,24000,90.9,length
+anthropic/claude-haiku-5.5,B504,4,retail,seattle,messages,True,unusable,unusable,,,,,,,0.0123243,3243,24000,23999,93.1,length
+anthropic/claude-haiku-5.5,B505,5,retail,federal,table,False,impossible,correct_impossible,,,,,,,0.0018163,2993,3034,2965,14.0,stop
+anthropic/claude-haiku-5.5,B505,5,retail,california,messages,False,impossible,correct_impossible,,,,,,,0.0015416,3476,2388,2309,9.9,stop
+anthropic/claude-haiku-5.5,B505,5,retail,seattle,table,False,impossible,correct_impossible,,,,,,,0.0019825,3080,3349,3276,14.5,stop
+anthropic/claude-haiku-5.5,B508,3,cafe,federal,messages,False,impossible,correct_impossible,,,,,,,0.0084266,2181,16417,16269,67.7,stop
+anthropic/claude-haiku-5.5,B508,3,cafe,california,table,False,impossible,correct_impossible,,,,,,,0.0019456,2306,3430,3305,14.7,stop
+anthropic/claude-haiku-5.5,B508,3,cafe,seattle,messages,False,impossible,correct_impossible,,,,,,,0.0087013,2268,16949,16824,69.3,stop
+anthropic/claude-haiku-5.5,B510,5,quick-service restaurant,federal,table,True,unusable,unusable,,,,,,,0.0123192,3192,24000,24000,93.6,length
+anthropic/claude-haiku-5.5,B510,5,quick-service restaurant,california,messages,True,unusable,unusable,,,,,,,0.0123635,3635,24000,24000,92.9,length
+anthropic/claude-haiku-5.5,B510,5,quick-service restaurant,seattle,table,True,unusable,unusable,,,,,,,0.0123279,3279,24000,24000,97.8,length
+anthropic/claude-haiku-5.5,B509,4,quick-service restaurant,federal,messages,True,schedule,legal,,0,0,5867.5,5196.0,671.5,0.0105491,2656,20567,20141,77.2,stop
+anthropic/claude-haiku-5.5,B509,4,quick-service restaurant,california,table,True,schedule,legal,,0,0,5608.0,5205.0,403.0,0.0101101,2821,19656,19180,74.8,stop
+anthropic/claude-haiku-5.5,B509,4,quick-service restaurant,seattle,messages,True,unusable,unusable,,,,,,,0.0122743,2743,24000,24000,90.9,length
+anthropic/claude-opus-5.5,B501,1,quick-service restaurant,federal,table,False,impossible,correct_impossible,,,,,,,0.014128,1187,469,321,6.5,stop
+anthropic/claude-opus-5.5,B501,1,quick-service restaurant,california,messages,False,impossible,correct_impossible,,,,,,,0.014592,1423,445,351,7.1,stop
+anthropic/claude-opus-5.5,B501,1,quick-service restaurant,seattle,table,False,impossible,correct_impossible,,,,,,,0.024976,1274,994,435,10.7,stop
+anthropic/claude-opus-5.5,B502,2,retail,federal,messages,False,impossible,correct_impossible,,,,,,,0.029744,1731,1141,703,11.9,stop
+anthropic/claude-opus-5.5,B502,2,retail,california,table,False,impossible,correct_impossible,,,,,,,0.025188,1932,873,756,11.3,stop
+anthropic/claude-opus-5.5,B502,2,retail,seattle,messages,False,impossible,correct_impossible,,,,,,,0.035132,1818,1393,854,14.2,stop
+anthropic/claude-opus-5.5,B503,3,cafe,federal,table,True,schedule,legal,,0,0,3719.0,3586.5,132.5,0.063932,2098,2777,1865,24.0,stop
+anthropic/claude-opus-5.5,B503,3,cafe,california,messages,True,schedule,legal,,0,0,3730.0,3586.5,143.5,0.103728,2387,4709,3681,39.5,stop
+anthropic/claude-opus-5.5,B503,3,cafe,seattle,table,True,schedule,legal,,0,0,3669.0,3594.5,74.5,0.10024,2185,4575,3555,41.6,stop
+anthropic/claude-opus-5.5,B504,4,retail,federal,messages,True,schedule,legal,,0,0,7245.0,6718.5,526.5,0.112424,3156,4990,4027,37.4,stop
+anthropic/claude-opus-5.5,B504,4,retail,california,table,True,schedule,legal,,0,0,7174.0,6718.5,455.5,0.126248,3197,5673,4615,44.5,stop
+anthropic/claude-opus-5.5,B504,4,retail,seattle,messages,True,schedule,legal,,0,0,7147.5,6718.5,429.0,0.135752,3243,6139,4751,46.0,stop
+anthropic/claude-opus-5.5,B505,5,retail,federal,table,False,impossible,correct_impossible,,,,,,,0.033872,2993,1095,845,12.0,stop
+anthropic/claude-opus-5.5,B505,5,retail,california,messages,False,impossible,correct_impossible,,,,,,,0.100344,3476,4322,4198,35.1,stop
+anthropic/claude-opus-5.5,B505,5,retail,seattle,table,False,impossible,correct_impossible,,,,,,,0.05414,3080,2091,1438,19.8,stop
+anthropic/claude-opus-5.5,B508,3,cafe,federal,messages,False,impossible,correct_impossible,,,,,,,0.044464,2181,1787,1622,16.8,stop
+anthropic/claude-opus-5.5,B508,3,cafe,california,table,False,impossible,correct_impossible,,,,,,,0.048904,2306,1984,1512,18.7,stop
+anthropic/claude-opus-5.5,B508,3,cafe,seattle,messages,False,impossible,correct_impossible,,,,,,,0.032792,2268,1186,863,12.3,stop
+anthropic/claude-opus-5.5,B510,5,quick-service restaurant,federal,table,True,schedule,legal,,0,0,11431.0,11158.0,273.0,0.208788,3192,9801,8285,75.7,stop
+anthropic/claude-opus-5.5,B510,5,quick-service restaurant,california,messages,True,schedule,legal,,0,0,11513.0,11168.0,345.0,0.21132,3635,9839,8129,74.4,stop
+anthropic/claude-opus-5.5,B510,5,quick-service restaurant,seattle,table,True,schedule,legal,,0,0,11477.0,11179.0,298.0,0.292456,3279,13967,12167,112.8,stop
+anthropic/claude-opus-5.5,B509,4,quick-service restaurant,federal,messages,True,schedule,legal,,0,0,5529.0,5196.0,333.0,0.107744,2656,4856,3875,36.7,stop
+anthropic/claude-opus-5.5,B509,4,quick-service restaurant,california,table,True,schedule,legal,,0,0,5536.0,5205.0,331.0,0.114984,2821,5185,3870,41.6,stop
+anthropic/claude-opus-5.5,B509,4,quick-service restaurant,seattle,messages,True,schedule,legal,,0,0,5565.0,5196.0,369.0,0.114372,2743,5170,3587,41.6,stop
+anthropic/claude-sonnet-5.5,B501,1,quick-service restaurant,federal,table,False,impossible,correct_impossible,,,,,,,0.012914,1187,1054,906,9.2,stop
+anthropic/claude-sonnet-5.5,B501,1,quick-service restaurant,california,messages,False,impossible,correct_impossible,,,,,,,0.009676,1423,683,561,7.1,stop
+anthropic/claude-sonnet-5.5,B501,1,quick-service restaurant,seattle,table,False,impossible,correct_impossible,,,,,,,0.015018,1274,1247,1051,10.5,stop
+anthropic/claude-sonnet-5.5,B502,2,retail,federal,messages,False,impossible,correct_impossible,,,,,,,0.033252,1731,2979,2761,20.5,stop
+anthropic/claude-sonnet-5.5,B502,2,retail,california,table,False,impossible,correct_impossible,,,,,,,0.032674,1932,2881,2716,21.8,stop
+anthropic/claude-sonnet-5.5,B502,2,retail,seattle,messages,False,impossible,correct_impossible,,,,,,,0.036526,1818,3289,3165,24.3,stop
+anthropic/claude-sonnet-5.5,B503,3,cafe,federal,table,True,schedule,legal,,0,0,3751.0,3586.5,164.5,0.039826,2098,3563,2821,24.0,stop
+anthropic/claude-sonnet-5.5,B503,3,cafe,california,messages,True,schedule,legal,,0,0,3678.5,3586.5,92.0,0.048014,2387,4324,3630,28.5,stop
+anthropic/claude-sonnet-5.5,B503,3,cafe,seattle,table,True,schedule,legal,,0,0,3741.0,3594.5,146.5,0.06622,2185,6185,5543,44.0,stop
+anthropic/claude-sonnet-5.5,B504,4,retail,federal,messages,True,schedule,legal,,0,0,7193.0,6718.5,474.5,0.098842,3156,9253,8220,58.6,stop
+anthropic/claude-sonnet-5.5,B504,4,retail,california,table,True,schedule,legal,,0,0,7165.0,6718.5,446.5,0.066844,3197,6045,5208,37.7,stop
+anthropic/claude-sonnet-5.5,B504,4,retail,seattle,messages,True,schedule,legal,,0,0,7146.0,6718.5,427.5,0.095176,3243,8869,7840,55.9,stop
+anthropic/claude-sonnet-5.5,B505,5,retail,federal,table,False,impossible,correct_impossible,,,,,,,0.070506,2993,6452,6293,47.2,stop
+anthropic/claude-sonnet-5.5,B505,5,retail,california,messages,False,impossible,correct_impossible,,,,,,,0.088292,3476,8134,7983,55.5,stop
+anthropic/claude-sonnet-5.5,B505,5,retail,seattle,table,False,impossible,correct_impossible,,,,,,,0.088,3080,8184,8023,67.2,stop
+anthropic/claude-sonnet-5.5,B508,3,cafe,federal,messages,False,impossible,correct_impossible,,,,,,,0.047702,2181,4334,4123,30.0,stop
+anthropic/claude-sonnet-5.5,B508,3,cafe,california,table,False,impossible,correct_impossible,,,,,,,0.037322,2306,3271,3100,23.6,stop
+anthropic/claude-sonnet-5.5,B508,3,cafe,seattle,messages,False,impossible,correct_impossible,,,,,,,0.055906,2268,5137,4941,36.2,stop
+anthropic/claude-sonnet-5.5,B510,5,quick-service restaurant,federal,table,True,schedule,legal,,0,0,11497.0,11158.0,339.0,0.160464,3192,15408,14109,98.8,stop
+anthropic/claude-sonnet-5.5,B510,5,quick-service restaurant,california,messages,True,schedule,legal,,0,0,11441.0,11168.0,273.0,0.16585,3635,15858,14448,92.1,stop
+anthropic/claude-sonnet-5.5,B510,5,quick-service restaurant,seattle,table,True,schedule,legal,,0,0,11510.0,11179.0,331.0,0.237298,3279,23074,21754,150.3,stop
+anthropic/claude-sonnet-5.5,B509,4,quick-service restaurant,federal,messages,True,schedule,legal,,0,0,5522.0,5196.0,326.0,0.053642,2656,4833,4114,30.0,stop
+anthropic/claude-sonnet-5.5,B509,4,quick-service restaurant,california,table,True,schedule,legal,,0,0,5589.0,5205.0,384.0,0.051372,2821,4573,3799,28.5,stop
+anthropic/claude-sonnet-5.5,B509,4,quick-service restaurant,seattle,messages,True,schedule,legal,,0,0,5555.0,5196.0,359.0,0.082956,2743,7747,6987,50.0,stop
+deepseek/deepseek-v4.1-flash,B501,1,quick-service restaurant,federal,table,False,impossible,correct_impossible,,,,,,,0.0002217804,897,1369,1330,7.9,stop
+deepseek/deepseek-v4.1-flash,B501,1,quick-service restaurant,california,messages,False,impossible,correct_impossible,,,,,,,0.00065619,1034,1240,1054,7.6,stop
+deepseek/deepseek-v4.1-flash,B501,1,quick-service restaurant,seattle,table,False,impossible,correct_impossible,,,,,,,0.001021115,947,1957,1909,7.2,stop
+deepseek/deepseek-v4.1-flash,B502,2,retail,federal,messages,False,impossible,correct_impossible,,,,,,,0.00887269,1236,13289,13216,42.8,stop
+deepseek/deepseek-v4.1-flash,B502,2,retail,california,table,False,impossible,correct_impossible,,,,,,,0.00335752,1493,4729,4685,15.3,stop
+deepseek/deepseek-v4.1-flash,B502,2,retail,seattle,messages,False,impossible,correct_impossible,,,,,,,0.00653133,1286,8052,8003,49.8,stop
+deepseek/deepseek-v4.1-flash,B503,3,cafe,federal,table,True,schedule,legal,,0,0,3701.0,3586.5,114.5,0.00787888,1664,15608,15450,37.9,stop
+deepseek/deepseek-v4.1-flash,B503,3,cafe,california,messages,True,unusable,unusable,,,,,,,0.0034012824,1738,24000,24001,107.9,length
+deepseek/deepseek-v4.1-flash,B503,3,cafe,seattle,table,True,unusable,unusable,,,,,,,0.00123163,1714,2309,0,8.9,length
+deepseek/deepseek-v4.1-flash,B504,4,retail,federal,messages,True,unusable,unusable,,,,,,,0.003418926,2245,24000,24002,101.9,length
+deepseek/deepseek-v4.1-flash,B504,4,retail,california,table,True,unusable,unusable,,,,,,,0.0159289,2530,24000,24000,65.9,length
+deepseek/deepseek-v4.1-flash,B504,4,retail,seattle,messages,True,unusable,unusable,,,,,,,0.019167525,2295,24000,24000,142.9,length
+deepseek/deepseek-v4.1-flash,B505,5,retail,federal,table,False,impossible,correct_impossible,,,,,,,0.008116504,2368,13121,13059,75.5,stop
+deepseek/deepseek-v4.1-flash,B505,5,retail,california,messages,False,impossible,correct_impossible,,,,,,,0.008148028,2476,13155,13108,84.8,stop
+deepseek/deepseek-v4.1-flash,B505,5,retail,seattle,table,False,impossible,correct_impossible,,,,,,,0.0140811684,2418,17511,17451,104.0,stop
+deepseek/deepseek-v4.1-flash,B508,3,cafe,federal,messages,False,impossible,correct_impossible,,,,,,,0.0020653452,1585,14441,14377,64.4,stop
+deepseek/deepseek-v4.1-flash,B508,3,cafe,california,table,False,impossible,correct_impossible,,,,,,,0.001320176976,1811,9094,9047,42.2,stop
+deepseek/deepseek-v4.1-flash,B508,3,cafe,seattle,messages,False,impossible,correct_impossible,,,,,,,0.005899091,1635,11671,11626,53.7,stop
+deepseek/deepseek-v4.1-flash,B510,5,quick-service restaurant,federal,table,True,unusable,unusable,,,,,,,0.0162591,2540,24000,24000,115.0,length
+deepseek/deepseek-v4.1-flash,B510,5,quick-service restaurant,california,messages,True,unusable,unusable,,,,,,,0.012090895,2597,24000,14074,72.5,length
+deepseek/deepseek-v4.1-flash,B510,5,quick-service restaurant,seattle,table,True,unusable,unusable,,,,,,,0.01211655,2590,24000,24000,67.1,length
+deepseek/deepseek-v4.1-flash,B509,4,quick-service restaurant,federal,messages,True,schedule,legal,,0,0,5492.0,5196.0,296.0,0.00753169,1882,14894,14711,40.9,stop
+deepseek/deepseek-v4.1-flash,B509,4,quick-service restaurant,california,table,True,unusable,unusable,,,,,,,0.012077875,2225,24000,13084,64.6,length
+deepseek/deepseek-v4.1-flash,B509,4,quick-service restaurant,seattle,messages,True,schedule,legal,,0,0,5498.0,5196.0,302.0,0.009557456,1932,18961,18778,20.3,stop
+google/gemini-3.5-flash-lite,B501,1,quick-service restaurant,federal,table,False,impossible,correct_impossible,,,,,,,0.0004463,1046,53,0,1.2,stop
+google/gemini-3.5-flash-lite,B501,1,quick-service restaurant,california,messages,False,impossible,correct_impossible,,,,,,,0.0005589,1138,87,0,1.4,stop
+google/gemini-3.5-flash-lite,B501,1,quick-service restaurant,seattle,table,False,schedule,breaks_business_rule,over_max_hours;rest_gap,4,41.0,1864.0,,,0.0007875,1100,183,0,1.4,stop
+google/gemini-3.5-flash-lite,B502,2,retail,federal,messages,False,impossible,correct_impossible,,,,,,,0.0005243,1381,44,0,1.5,stop
+google/gemini-3.5-flash-lite,B502,2,retail,california,table,False,schedule,breaks_law,coverage;double_time;meal_missed;over_max_hours;overtime_daily;two_shifts_one_day;unavailable;wrong_role,22,190.0,3636.0,,,0.0013998,1791,345,0,1.9,stop
+google/gemini-3.5-flash-lite,B502,2,retail,seattle,messages,False,impossible,correct_impossible,,,,,,,0.0006205,1435,76,0,1.2,stop
+google/gemini-3.5-flash-lite,B503,3,cafe,federal,table,True,schedule,breaks_business_rule,over_max_hours;overtime_weekly;two_shifts_one_day;unavailable,36,180.75,5575.0,3586.5,,0.002117,2040,602,0,2.2,stop
+google/gemini-3.5-flash-lite,B503,3,cafe,california,messages,True,schedule,breaks_law,coverage;double_time;meal_missed;overtime_daily;two_shifts_one_day;unavailable;wrong_role,28,209.0,3200.0,3586.5,,0.0014285,1920,341,0,1.6,stop
+google/gemini-3.5-flash-lite,B503,3,cafe,seattle,table,True,schedule,breaks_business_rule,over_max_hours;overtime_weekly;rest_gap;two_shifts_one_day;unavailable,21,41.75,5786.0,3594.5,,0.0022232,2094,638,0,2.4,stop
+google/gemini-3.5-flash-lite,B504,4,retail,federal,messages,True,schedule,breaks_business_rule,coverage;over_max_hours;overtime_weekly;two_shifts_one_day;unavailable;wrong_role,64,23.5,12375.0,6718.5,,0.0034696,2557,1081,0,3.2,stop
+google/gemini-3.5-flash-lite,B504,4,retail,california,table,True,schedule,breaks_law,coverage;double_time;meal_missed;minor_daily;over_max_hours;overtime_daily;two_shifts_one_day;unavailable;wrong_role,167,2251.75,14769.0,6718.5,,0.0037984,3178,1138,0,3.5,stop
+google/gemini-3.5-flash-lite,B504,4,retail,seattle,messages,True,schedule,breaks_business_rule,coverage;unknown_id,38,0.0,0.0,6718.5,,0.0009158,2611,53,0,1.3,stop
+google/gemini-3.5-flash-lite,B505,5,retail,federal,table,False,impossible,correct_impossible,,,,,,,0.0010799,2983,74,0,1.3,stop
+google/gemini-3.5-flash-lite,B505,5,retail,california,messages,False,impossible,correct_impossible,,,,,,,0.0010564,2813,85,0,1.7,stop
+google/gemini-3.5-flash-lite,B505,5,retail,seattle,table,False,schedule,breaks_business_rule,coverage;over_max_hours;unavailable,36,0.0,9795.0,,,0.0032361,3037,930,0,2.7,stop
+google/gemini-3.5-flash-lite,B508,3,cafe,federal,messages,False,schedule,breaks_business_rule,coverage;over_max_hours;two_shifts_one_day;unavailable;wrong_role,33,0.0,3016.0,,,0.0012797,1749,302,0,1.7,stop
+google/gemini-3.5-flash-lite,B508,3,cafe,california,table,False,schedule,breaks_law,coverage;double_time;meal_missed;minor_daily;over_max_hours;overtime_daily;two_shifts_one_day;unavailable;wrong_role,55,665.25,4653.0,,,0.0017649,2183,444,0,2.1,stop
+google/gemini-3.5-flash-lite,B508,3,cafe,seattle,messages,False,impossible,correct_impossible,,,,,,,0.0007959,1803,102,0,1.2,stop
+google/gemini-3.5-flash-lite,B510,5,quick-service restaurant,federal,table,True,schedule,breaks_law,coverage;minor_weekly;over_max_hours;overtime_weekly;unavailable;wrong_role,55,465.75,15974.5,11158.0,,0.0039652,3234,1198,0,3.5,stop
+google/gemini-3.5-flash-lite,B510,5,quick-service restaurant,california,messages,True,schedule,breaks_law,coverage;minor_daily;minor_school_hours;minor_weekly;over_max_hours;overtime_weekly;unavailable;wrong_role,68,183.5,16402.0,11168.0,,0.0048014,2963,1565,0,4.2,stop
+google/gemini-3.5-flash-lite,B510,5,quick-service restaurant,seattle,table,True,schedule,breaks_business_rule,coverage;over_max_hours;overtime_weekly;rest_gap;two_shifts_one_day;unavailable;wrong_role,86,1061.75,17706.0,11179.0,,0.0048114,3288,1530,0,4.0,stop
+google/gemini-3.5-flash-lite,B509,4,quick-service restaurant,federal,messages,True,schedule,breaks_business_rule,coverage;over_max_hours;two_shifts_one_day;unavailable;wrong_role,27,0.0,7731.0,5196.0,,0.0025151,2142,749,0,2.7,stop
+google/gemini-3.5-flash-lite,B509,4,quick-service restaurant,california,table,True,schedule,breaks_law,double_time;meal_missed;over_max_hours;overtime_daily;two_shifts_one_day;unavailable,62,780.25,5784.5,5205.0,,0.0018517,2789,406,0,2.0,stop
+google/gemini-3.5-flash-lite,B509,4,quick-service restaurant,seattle,messages,True,schedule,breaks_business_rule,coverage;over_max_hours;rest_gap;two_shifts_one_day;unavailable;wrong_role,35,91.0,8773.0,5196.0,,0.0027488,2196,836,0,2.9,stop
+meta-llama/llama-4-maverick,B501,1,quick-service restaurant,federal,table,False,schedule,breaks_business_rule,over_max_hours;unavailable,3,0.0,1912.0,,,0.0021799,874,1874,0,20.7,stop
+meta-llama/llama-4-maverick,B501,1,quick-service restaurant,california,messages,False,schedule,breaks_law,meal_missed;over_max_hours;overtime_daily,14,165.0,1986.0,,,0.0020295,1010,1676,0,17.0,stop
+meta-llama/llama-4-maverick,B501,1,quick-service restaurant,seattle,table,False,schedule,breaks_business_rule,over_max_hours,2,0.0,1880.0,,,0.00207829,923,1761,0,18.1,stop
+meta-llama/llama-4-maverick,B502,2,retail,federal,messages,False,schedule,breaks_business_rule,coverage;over_max_hours;unavailable,11,0.0,2470.5,,,0.00341787,1205,2999,0,32.9,stop
+meta-llama/llama-4-maverick,B502,2,retail,california,table,False,schedule,breaks_business_rule,double_time;over_max_hours;overtime_daily;two_shifts_one_day,6,144.0,3338.0,,,0.00295627,1469,2445,0,26.1,stop
+meta-llama/llama-4-maverick,B502,2,retail,seattle,messages,False,schedule,breaks_business_rule,over_max_hours;two_shifts_one_day;unavailable,7,0.0,3284.0,,,0.00276602,1254,2330,0,27.1,stop
+meta-llama/llama-4-maverick,B503,3,cafe,federal,table,True,schedule,breaks_business_rule,coverage;over_max_hours;unavailable;wrong_role,8,0.0,3814.5,3586.5,,0.00293112,1640,2360,0,24.8,stop
+meta-llama/llama-4-maverick,B503,3,cafe,california,messages,True,schedule,breaks_law,coverage;double_time;meal_missed;minor_daily;minor_school_hours;overtime_daily;two_shifts_one_day;unavailable;wrong_role,30,167.5,3595.0,3586.5,,0.00200922,1706,1415,0,15.8,stop
+meta-llama/llama-4-maverick,B503,3,cafe,seattle,table,True,schedule,breaks_business_rule,coverage;over_max_hours;rest_gap;unavailable;wrong_role,8,22.5,3763.0,3594.5,,0.00260827,1689,2020,0,20.8,stop
+meta-llama/llama-4-maverick,B504,4,retail,federal,messages,True,schedule,breaks_business_rule,coverage;over_max_hours;two_shifts_one_day;unavailable;wrong_role,29,0.0,3554.0,6718.5,,0.00464261,2207,3922,0,45.1,stop
+meta-llama/llama-4-maverick,B504,4,retail,california,table,True,schedule,breaks_law,meal_missed;minor_daily;minor_school_hours;over_max_hours;overtime_daily;unavailable,45,377.0,7503.0,6718.5,,0.00330257,2507,2428,0,25.2,stop
+meta-llama/llama-4-maverick,B504,4,retail,seattle,messages,True,impossible,false_impossible,,,,,,,0.00227572,2256,1489,0,15.8,stop
+meta-llama/llama-4-maverick,B505,5,retail,federal,table,False,schedule,breaks_law,coverage;minor_daily;minor_school_hours;minor_weekly;over_max_hours;two_shifts_one_day;unavailable;wrong_role,41,0.0,9774.0,,,0.00323991,2345,2471,0,28.6,stop
+meta-llama/llama-4-maverick,B505,5,retail,california,messages,False,schedule,breaks_law,coverage;double_time;duplicate;meal_missed;minor_daily;minor_school_hours;minor_time;minor_weekly;over_max_hours;overtime_daily;overtime_weekly;two_shifts_one_day;unavailable;wrong_role,149,2633.25,7776.5,,,0.00264001,2439,1867,0,19.8,stop
+meta-llama/llama-4-maverick,B505,5,retail,seattle,table,False,schedule,breaks_law,coverage;minor_daily;minor_weekly;over_max_hours;two_shifts_one_day;unavailable,52,0.0,9072.5,,,0.00324342,2394,2466,0,29.2,stop
+meta-llama/llama-4-maverick,B508,3,cafe,federal,messages,False,schedule,breaks_business_rule,coverage;over_max_hours;two_shifts_one_day;unavailable;wrong_role,12,0.0,4094.5,,,0.00361532,1552,3075,0,41.5,stop
+meta-llama/llama-4-maverick,B508,3,cafe,california,table,False,schedule,breaks_law,coverage;meal_missed;over_max_hours;overtime_daily;unavailable;wrong_role,28,242.5,4022.0,,,0.00240681,1787,1862,0,28.3,stop
+meta-llama/llama-4-maverick,B508,3,cafe,seattle,messages,False,impossible,correct_impossible,,,,,,,0.00278847,1601,2231,0,28.8,stop
+meta-llama/llama-4-maverick,B510,5,quick-service restaurant,federal,table,True,schedule,breaks_business_rule,coverage;over_max_hours;overtime_weekly;unavailable;wrong_role,23,187.25,11507.0,11158.0,,0.00502284,2516,4148,0,46.1,stop
+meta-llama/llama-4-maverick,B510,5,quick-service restaurant,california,messages,True,schedule,breaks_law,coverage;double_time;meal_missed;minor_daily;minor_school_hours;minor_time;minor_weekly;over_max_hours;overtime_daily;overtime_weekly;seventh_day;two_shifts_one_day;unavailable;wrong_role,133,3385.0,10506.5,11168.0,,0.00307114,2554,2183,0,26.8,stop
+meta-llama/llama-4-maverick,B510,5,quick-service restaurant,seattle,table,True,schedule,breaks_business_rule,coverage;two_shifts_one_day;unavailable;wrong_role,32,0.0,3754.0,11179.0,,0.00487599,2565,3984,0,45.9,stop
+meta-llama/llama-4-maverick,B509,4,quick-service restaurant,federal,messages,True,schedule,breaks_business_rule,coverage;unavailable;wrong_role,9,0.0,5397.5,5196.0,,0.00382326,1846,3229,0,34.7,stop
+meta-llama/llama-4-maverick,B509,4,quick-service restaurant,california,table,True,schedule,breaks_law,coverage;double_time;meal_missed;over_max_hours;overtime_daily;two_shifts_one_day;unavailable;wrong_role,46,735.25,5649.5,5205.0,,0.00211459,2201,1350,0,15.6,stop
+meta-llama/llama-4-maverick,B509,4,quick-service restaurant,seattle,messages,True,schedule,breaks_business_rule,coverage;over_max_hours;two_shifts_one_day;unavailable;wrong_role,21,0.0,5535.5,5196.0,,0.00339649,1895,2739,0,28.6,stop
+openai/gpt-6-luna,B501,1,quick-service restaurant,federal,table,False,impossible,correct_impossible,,,,,,,0.0003003,868,427,385,6.4,stop
+openai/gpt-6-luna,B501,1,quick-service restaurant,california,messages,False,impossible,correct_impossible,,,,,,,0.0006543,1003,1108,1064,12.1,stop
+openai/gpt-6-luna,B501,1,quick-service restaurant,seattle,table,False,impossible,correct_impossible,,,,,,,0.0002116,916,240,205,3.8,stop
+openai/gpt-6-luna,B502,2,retail,federal,messages,False,impossible,correct_impossible,,,,,,,0.000843675,1198,1388,1346,14.7,stop
+openai/gpt-6-luna,B502,2,retail,california,table,False,impossible,correct_impossible,,,,,,,0.00044305,1461,521,479,6.6,stop
+openai/gpt-6-luna,B502,2,retail,seattle,messages,False,impossible,correct_impossible,,,,,,,0.002504175,1246,4697,4643,43.6,stop
+openai/gpt-6-luna,B503,3,cafe,federal,table,True,schedule,legal,,0,0,3697.0,3586.5,110.5,0.00216405,1633,3920,3624,33.1,stop
+openai/gpt-6-luna,B503,3,cafe,california,messages,True,schedule,legal,,0,0,3678.5,3586.5,92.0,0.0023098,1699,4195,3879,36.4,stop
+openai/gpt-6-luna,B503,3,cafe,seattle,table,True,schedule,breaks_business_rule,unavailable,1,0.0,3786.0,3594.5,,0.00294455,1681,5469,5173,48.3,stop
+openai/gpt-6-luna,B504,4,retail,federal,messages,True,schedule,breaks_business_rule,two_shifts_one_day;unavailable,4,0.0,7293.0,6718.5,,0.003160925,2200,5772,5250,50.3,stop
+openai/gpt-6-luna,B504,4,retail,california,table,True,schedule,legal,,0,0,7161.5,6718.5,443.0,0.003619675,2498,6615,6065,56.0,stop
+openai/gpt-6-luna,B504,4,retail,seattle,messages,True,schedule,breaks_business_rule,over_max_hours;unavailable,2,0.0,7171.0,6718.5,,0.002945425,2248,5329,4779,44.7,stop
+openai/gpt-6-luna,B505,5,retail,federal,table,False,impossible,correct_impossible,,,,,,,0.000836175,2338,1088,1034,12.7,stop
+openai/gpt-6-luna,B505,5,retail,california,messages,False,impossible,correct_impossible,,,,,,,0.001152425,2432,1697,1645,17.9,stop
+openai/gpt-6-luna,B505,5,retail,seattle,table,False,impossible,correct_impossible,,,,,,,0.008827675,2386,17059,16996,167.6,stop
+openai/gpt-6-luna,B508,3,cafe,federal,messages,False,impossible,correct_impossible,,,,,,,0.006898675,1546,13411,13363,133.1,stop
+openai/gpt-6-luna,B508,3,cafe,california,table,False,impossible,correct_impossible,,,,,,,0.0037398,1779,7035,6988,69.9,stop
+openai/gpt-6-luna,B508,3,cafe,seattle,messages,False,impossible,correct_impossible,,,,,,,0.004469175,1594,8540,8481,85.0,stop
+openai/gpt-6-luna,B510,5,quick-service restaurant,federal,table,True,schedule,breaks_business_rule,coverage;over_max_hours;overtime_weekly;unavailable;wrong_role,8,137.5,12193.0,11158.0,,0.00622755,2509,11828,11207,108.1,stop
+openai/gpt-6-luna,B510,5,quick-service restaurant,california,messages,True,schedule,legal,,0,0,11571.0,11168.0,403.0,0.0066023,2547,12568,11751,117.5,stop
+openai/gpt-6-luna,B510,5,quick-service restaurant,seattle,table,True,schedule,breaks_business_rule,over_max_hours;overtime_weekly;unavailable,10,69.0,11677.0,11179.0,,0.00482205,2557,9005,8188,82.4,stop
+openai/gpt-6-luna,B509,4,quick-service restaurant,federal,messages,True,schedule,breaks_business_rule,over_max_hours;unavailable,2,0.0,5601.0,5196.0,,0.001938925,1840,3418,3047,32.6,stop
+openai/gpt-6-luna,B509,4,quick-service restaurant,california,table,True,schedule,breaks_business_rule,coverage;over_max_hours;wrong_role,5,0.0,5669.0,5205.0,,0.00269755,2193,4847,4476,45.8,stop
+openai/gpt-6-luna,B509,4,quick-service restaurant,seattle,messages,True,schedule,legal,,0,0,5575.0,5196.0,379.0,0.002105425,1888,3739,3368,34.4,stop
+openai/gpt-6.1-sol,B501,1,quick-service restaurant,federal,table,False,impossible,correct_impossible,,,,,,,0.004636,868,290,222,6.9,stop
+openai/gpt-6.1-sol,B501,1,quick-service restaurant,california,messages,False,impossible,correct_impossible,,,,,,,0.004806,1003,280,236,8.8,stop
+openai/gpt-6.1-sol,B501,1,quick-service restaurant,seattle,table,False,impossible,correct_impossible,,,,,,,0.005132,916,330,284,10.1,stop
+openai/gpt-6.1-sol,B502,2,retail,federal,messages,False,impossible,correct_impossible,,,,,,,0.0059435,1198,295,217,7.9,stop
+openai/gpt-6.1-sol,B502,2,retail,california,table,False,impossible,correct_impossible,,,,,,,0.006641,1461,299,256,7.7,stop
+openai/gpt-6.1-sol,B502,2,retail,seattle,messages,False,impossible,correct_impossible,,,,,,,0.0070135,1246,390,322,10.3,stop
+openai/gpt-6.1-sol,B503,3,cafe,federal,table,True,schedule,breaks_business_rule,unavailable,1,0.0,3894.0,3586.5,,0.013011,1633,893,665,16.9,stop
+openai/gpt-6.1-sol,B503,3,cafe,california,messages,True,schedule,breaks_business_rule,unavailable,1,0.0,3680.0,3586.5,,0.015306,1699,1106,790,21.0,stop
+openai/gpt-6.1-sol,B503,3,cafe,seattle,table,True,schedule,legal,,0,0,3736.0,3594.5,141.5,0.017701,1681,1350,1034,26.1,stop
+openai/gpt-6.1-sol,B504,4,retail,federal,messages,True,schedule,legal,,0,0,7543.5,6718.5,825.0,0.0210985,2200,1560,1170,20.8,stop
+openai/gpt-6.1-sol,B504,4,retail,california,table,True,schedule,breaks_business_rule,unavailable,1,0.0,7071.5,6718.5,,0.0238335,2498,1759,1209,24.9,stop
+openai/gpt-6.1-sol,B504,4,retail,seattle,messages,True,schedule,legal,,0,0,7078.0,6718.5,359.5,0.0263385,2248,2072,1522,36.0,stop
+openai/gpt-6.1-sol,B505,5,retail,federal,table,False,impossible,correct_impossible,,,,,,,0.0110135,2338,517,454,12.9,stop
+openai/gpt-6.1-sol,B505,5,retail,california,messages,False,impossible,correct_impossible,,,,,,,0.0104785,2432,440,383,11.6,stop
+openai/gpt-6.1-sol,B505,5,retail,seattle,table,False,impossible,correct_impossible,,,,,,,0.0105235,2386,456,399,11.0,stop
+openai/gpt-6.1-sol,B508,3,cafe,federal,messages,False,impossible,correct_impossible,,,,,,,0.0080835,1546,422,358,10.4,stop
+openai/gpt-6.1-sol,B508,3,cafe,california,table,False,impossible,correct_impossible,,,,,,,0.007806,1779,336,288,9.8,stop
+openai/gpt-6.1-sol,B508,3,cafe,seattle,messages,False,impossible,correct_impossible,,,,,,,0.0091735,1594,519,453,10.3,stop
+openai/gpt-6.1-sol,B510,5,quick-service restaurant,federal,table,True,schedule,legal,,0,0,11525.0,11158.0,367.0,0.037841,2509,3157,2340,40.6,stop
+openai/gpt-6.1-sol,B510,5,quick-service restaurant,california,messages,True,schedule,breaks_business_rule,unavailable,1,0.0,11518.0,11168.0,,0.046886,2547,4052,3235,68.3,stop
+openai/gpt-6.1-sol,B510,5,quick-service restaurant,seattle,table,True,schedule,breaks_business_rule,unavailable,1,0.0,11583.0,11179.0,,0.040441,2557,3405,2588,55.4,stop
+openai/gpt-6.1-sol,B509,4,quick-service restaurant,federal,messages,True,schedule,legal,,0,0,5539.0,5196.0,343.0,0.0134685,1840,887,516,14.4,stop
+openai/gpt-6.1-sol,B509,4,quick-service restaurant,california,table,True,schedule,breaks_business_rule,unavailable,2,0.0,5652.0,5205.0,,0.016221,2193,1074,703,17.5,stop
+openai/gpt-6.1-sol,B509,4,quick-service restaurant,seattle,messages,True,schedule,legal,,0,0,5572.0,5196.0,376.0,0.0185385,1888,1382,1011,25.7,stop
+openai/gpt-oss-120b,B501,1,quick-service restaurant,federal,table,False,impossible,correct_impossible,,,,,,,0.000164096,932,728,0,5.2,stop
+openai/gpt-oss-120b,B501,1,quick-service restaurant,california,messages,False,impossible,correct_impossible,,,,,,,0.00015306,1067,807,742,13.4,stop
+openai/gpt-oss-120b,B501,1,quick-service restaurant,seattle,table,False,impossible,correct_impossible,,,,,,,0.00014208,980,756,699,7.6,stop
+openai/gpt-oss-120b,B502,2,retail,federal,messages,False,schedule,breaks_business_rule,coverage;over_max_hours;unavailable;wrong_role,7,0.0,3348.0,,,0.00435225,1259,6939,5210,13.9,stop
+openai/gpt-oss-120b,B502,2,retail,california,table,False,impossible,correct_impossible,,,,,,,0.00025941,1525,1187,1113,16.7,stop
+openai/gpt-oss-120b,B502,2,retail,seattle,messages,False,impossible,correct_impossible,,,,,,,0.000321857,1310,1511,0,14.6,stop
+openai/gpt-oss-120b,B503,3,cafe,federal,table,True,schedule,breaks_business_rule,coverage;unavailable,2,0.0,3608.0,3586.5,,0.001491158,1684,8405,5589,224.5,stop
+openai/gpt-oss-120b,B503,3,cafe,california,messages,True,schedule,breaks_business_rule,coverage;double_time;duplicate;over_max_hours;overtime_daily;two_shifts_one_day;unavailable,26,367.5,3596.5,3586.5,,9.4009e-05,1763,466,0,7.4,stop
+openai/gpt-oss-120b,B503,3,cafe,seattle,table,True,schedule,legal,,0,0,3687.0,3594.5,92.5,0.00264145,1744,10217,7098,41.8,stop
+openai/gpt-oss-120b,B504,4,retail,federal,messages,True,schedule,breaks_business_rule,over_max_hours;unavailable,3,0.0,7488.0,6718.5,,0.002632251,2264,13713,0,103.9,stop
+openai/gpt-oss-120b,B504,4,retail,california,table,True,impossible,false_impossible,,,,,,,0.00020016,2562,822,764,14.8,stop
+openai/gpt-oss-120b,B504,4,retail,seattle,messages,True,impossible,false_impossible,,,,,,,0.001559189,2312,7967,0,66.0,stop
+openai/gpt-oss-120b,B505,5,retail,federal,table,False,impossible,correct_impossible,,,,,,,0.00152334,2402,9680,9607,78.9,stop
+openai/gpt-oss-120b,B505,5,retail,california,messages,False,impossible,correct_impossible,,,,,,,0.000380701,2483,1699,1226,58.9,stop
+openai/gpt-oss-120b,B505,5,retail,seattle,table,False,impossible,correct_impossible,,,,,,,0.00071034,2450,3538,3507,25.9,stop
+openai/gpt-oss-120b,B508,3,cafe,federal,messages,False,impossible,correct_impossible,,,,,,,0.0009465,1610,5988,5896,103.6,stop
+openai/gpt-oss-120b,B508,3,cafe,california,table,False,impossible,correct_impossible,,,,,,,5.4169e-05,1843,46,0,1.6,stop
+openai/gpt-oss-120b,B508,3,cafe,seattle,messages,False,impossible,correct_impossible,,,,,,,0.000364461,1658,1683,0,16.6,stop
+openai/gpt-oss-120b,B510,5,quick-service restaurant,federal,table,True,unusable,unusable,,,,,,,0.00367719,2573,24000,23997,384.2,length
+openai/gpt-oss-120b,B510,5,quick-service restaurant,california,messages,True,impossible,false_impossible,,,,,,,0.000211896,2598,681,484,15.5,stop
+openai/gpt-oss-120b,B510,5,quick-service restaurant,seattle,table,True,impossible,false_impossible,,,,,,,0.002332541,2621,12053,0,107.6,stop
+openai/gpt-oss-120b,B509,4,quick-service restaurant,federal,messages,True,impossible,false_impossible,,,,,,,5.5616e-05,1904,44,0,1.2,stop
+openai/gpt-oss-120b,B509,4,quick-service restaurant,california,table,True,schedule,breaks_business_rule,coverage;unavailable;wrong_role,5,0.0,5589.0,5205.0,,0.00220563,2257,12576,12208,85.4,stop
+openai/gpt-oss-120b,B509,4,quick-service restaurant,seattle,messages,True,schedule,breaks_business_rule,coverage;unavailable,3,0.0,5270.5,5196.0,,0.00336804,1952,22068,21673,262.4,stop

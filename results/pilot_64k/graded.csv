@@ -1,0 +1,18 @@
+model,business_id,level,type,ruleset,format,feasible,reply,outcome,violations,n_violations,premium_usd,labor_cost,best_cost,over_best,cost_usd,prompt_tokens,completion_tokens,reasoning_tokens,seconds,finish
+anthropic/claude-haiku-5.5,B504,4,retail,federal,messages,True,schedule,legal,,0,0,7200.0,6718.5,481.5,0.0120306,3156,23430,22751,86.3,stop
+anthropic/claude-haiku-5.5,B504,4,retail,california,table,True,schedule,legal,,0,0,7242.5,6718.5,524.0,0.0128452,3197,25051,24213,92.7,stop
+anthropic/claude-haiku-5.5,B504,4,retail,seattle,messages,True,schedule,legal,,0,0,7200.0,6718.5,481.5,0.0131798,3243,25711,24755,94.0,stop
+anthropic/claude-haiku-5.5,B510,5,quick-service restaurant,federal,table,True,schedule,breaks_law,minor_weekly,1,0.0,11429.0,11158.0,,0.0168022,3192,32966,31892,125.7,stop
+anthropic/claude-haiku-5.5,B510,5,quick-service restaurant,california,messages,True,schedule,legal,,0,0,11546.0,11168.0,378.0,0.020311,3635,39895,38821,145.3,stop
+anthropic/claude-haiku-5.5,B510,5,quick-service restaurant,seattle,table,True,schedule,legal,,0,0,11552.0,11179.0,373.0,0.0223174,3279,43979,42905,169.7,stop
+anthropic/claude-haiku-5.5,B509,4,quick-service restaurant,seattle,messages,True,schedule,legal,,0,0,5564.0,5196.0,368.0,0.0096263,2743,18704,18228,70.8,stop
+deepseek/deepseek-v4.1-flash,B503,3,cafe,california,messages,True,schedule,legal,,0,0,3724.0,3586.5,137.5,0.003757356,1738,26558,26240,109.0,stop
+deepseek/deepseek-v4.1-flash,B503,3,cafe,seattle,table,True,unusable,unusable,,,,,,,0.00104063,1714,1927,0,5.5,length
+deepseek/deepseek-v4.1-flash,B504,4,retail,federal,messages,True,schedule,legal,,0,0,7310.0,6718.5,591.5,0.0041106108,2245,28969,28431,112.2,stop
+deepseek/deepseek-v4.1-flash,B504,4,retail,california,table,True,schedule,legal,,0,0,7246.5,6718.5,528.0,0.01793447,2530,29497,28937,208.6,stop
+deepseek/deepseek-v4.1-flash,B504,4,retail,seattle,messages,True,schedule,legal,,0,0,7235.5,6718.5,517.0,0.0184779114,2295,23649,23090,136.2,stop
+deepseek/deepseek-v4.1-flash,B510,5,quick-service restaurant,federal,table,True,schedule,legal,,0,0,11523.0,11158.0,365.0,0.0134048,2540,26581,26186,61.2,stop
+deepseek/deepseek-v4.1-flash,B510,5,quick-service restaurant,california,messages,True,schedule,legal,,0,0,11533.0,11168.0,365.0,0.022723395,2597,45265,26156,147.6,stop
+deepseek/deepseek-v4.1-flash,B510,5,quick-service restaurant,seattle,table,True,schedule,breaks_law,minor_weekly,1,0.0,11614.0,11179.0,,0.01626555,2590,32298,31903,72.2,stop
+deepseek/deepseek-v4.1-flash,B509,4,quick-service restaurant,california,table,True,unusable,unusable,,,,,,,0.032077875,2225,64000,46769,173.6,length
+openai/gpt-oss-120b,B510,5,quick-service restaurant,federal,table,True,schedule,breaks_business_rule,coverage;over_max_hours;overtime_weekly;two_shifts_one_day;unavailable,18,100.0,9078.5,11158.0,,0.00295276,2560,16812,11447,456.1,stop

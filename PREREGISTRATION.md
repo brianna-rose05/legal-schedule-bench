@@ -41,7 +41,7 @@
   | anthropic/claude-opus-5.5 | 120 | 20 |
 
   Comparisons between models use the instances both models ran. Sample sizes were set by a fixed budget (about US$110) using per-instance costs measured in the pilot.
-- **Solver condition:** openai/gpt-6-luna and google/gemini-3.5-flash-lite on the 300-instance sample (50 businesses), with a `run_python` tool (Python 3 with OR-Tools; at most 10 runs; 60 seconds each). Same prompt and answer format otherwise.
+- **Solver condition:** openai/gpt-6-luna on the 300-instance sample (50 businesses) and google/gemini-3.5-flash-lite on the 120-instance sample (20 businesses; smaller because a test run cost about US$0.06 per instance), with a `run_python` tool (Python 3 with OR-Tools; at most 10 runs; 60 seconds each; after the 10th run the model is asked once for its final answer). Same prompt and answer format otherwise; H5 compares each model with its own text-only results on the same instances.
 - **Settings:** temperature 0; each model's default reasoning; maximum output 64,000 tokens (the pilot showed that a 24,000-token cap cut off some models mid-reasoning); identical prompt for every model; rules given in the prompt; output one line per assignment between `<schedule>` tags, or `IMPOSSIBLE`. Replies cut off at the token limit count as unusable.
 - **Run order and stopping:** the cheapest models run first. If spending reaches the budget before a model finishes, that model's sample is reported as run, with the shortfall stated; no instances are chosen by looking at results.
 - **Blinding:** grading is automatic; no human judgment enters any outcome.

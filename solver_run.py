@@ -68,9 +68,13 @@ def episode(key, model, prompt, max_tokens=64000):
     cost, steps, t0, usage_tot = 0.0, 0, time.time(), {"prompt_tokens": 0, "completion_tokens": 0}
     finish = None
     while True:
-        body = dict(model=model, temperature=0, max_tokens=max_tokens, messages=msgs, usage={"include": True})
-        if steps < MAX_STEPS:
-            body["tools"] = TOOLS
+        body = dict(model=model, temperature=0, max_tokens=max_tokens, messages=msgs, usage={"include": True},
+                    tools=TOOLS)
+        if steps >= MAX_STEPS:
+            # tool budget used up: no more runs, ask for the final answer once
+            body["tool_choice"] = "none"
+            body["messages"] = msgs + [{"role": "user", "content": "You have used all 10 runs. Give your final "
+                                        "answer now, in the answer format."}]
         j, err = post(key, body)
         if j is None:
             return dict(ok=False, error=err, steps=steps, usage=dict(cost=cost, **usage_tot))
@@ -84,7 +88,10 @@ def episode(key, model, prompt, max_tokens=64000):
         if not calls or steps >= MAX_STEPS:
             return dict(ok=True, text=msg.get("content") or "", steps=steps, finish=finish,
                         seconds=round(time.time() - t0, 1), usage=dict(cost=cost, **usage_tot))
-        msgs.append({"role": "assistant", "content": msg.get("content") or "", "tool_calls": calls})
+        am = {"role": "assistant", "content": msg.get("content") or "", "tool_calls": calls}
+        if msg.get("reasoning_details"):  # some providers (Gemini) need their reasoning passed back with tool calls
+            am["reasoning_details"] = msg["reasoning_details"]
+        msgs.append(am)
         for c in calls:
             steps += 1
             try:

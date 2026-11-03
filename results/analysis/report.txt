@@ -36,18 +36,18 @@ H2 supported: True (7 of 9 models show a significant rising trend)
 
 == RQ2. Mixed-effects logistic regression (lme4::glmer), possible scenarios ==
 any_violation ~ model + level + ruleset + format + (1 | business); reference: Claude Opus 5.5, federal, table
-business random-intercept SD: 0.4286797 
+business random-intercept SD: 0.4286799 
 converged warnings: 0
-(Intercept)                      OR=0.002 [0.00029, 0.0138] p=2.85e-10
-nameClaude Haiku 5.5             OR=3 [0.422, 21.3] p=0.273
-nameClaude Sonnet 5.5            OR=2.49 [0.266, 23.4] p=0.424
-nameDeepSeek V4.1 Flash          OR=3.94 [0.559, 27.8] p=0.169
-nameGPT-6 Luna                   OR=135 [19.7, 928] p=5.92e-07
-nameGPT-6.1 Sol                  OR=83.7 [12.1, 578] p=7.15e-06
-nameGemini 3.5 Flash Lite        OR=783 [114, 5.38e+03] p=1.25e-11
-nameLlama 4 Maverick             OR=946 [138, 6.5e+03] p=3.27e-12
-namegpt-oss-120b                 OR=97 [14.1, 665] p=3.22e-06
-level                            OR=1.6 [1.54, 1.67] p=7.11e-107
+(Intercept)                      OR=0.002 [0.000273, 0.0147] p=1.02e-09
+nameClaude Haiku 5.5             OR=3 [0.396, 22.7] p=0.287
+nameClaude Sonnet 5.5            OR=2.49 [0.252, 24.7] p=0.434
+nameDeepSeek V4.1 Flash          OR=3.94 [0.526, 29.6] p=0.182
+nameGPT-6 Luna                   OR=135 [18.5, 988] p=1.33e-06
+nameGPT-6.1 Sol                  OR=83.7 [11.4, 616] p=1.38e-05
+nameGemini 3.5 Flash Lite        OR=783 [107, 5.73e+03] p=5.41e-11
+nameLlama 4 Maverick             OR=946 [129, 6.93e+03] p=1.54e-11
+namegpt-oss-120b                 OR=97 [13.3, 709] p=6.54e-06
+level                            OR=1.6 [1.54, 1.67] p=7.29e-107
 rulesetcalifornia                OR=0.791 [0.712, 0.88] p=1.54e-05
 rulesetseattle                   OR=1.19 [1.07, 1.33] p=0.00134
 formatmessages                   OR=0.882 [0.808, 0.962] p=0.00474
@@ -153,8 +153,23 @@ Gemini 3.5 Flash Lite        98.7     98.3     99.1
           GPT-6.1 Sol              59.0               59.0             0.0              0.0        0
            GPT-6 Luna              46.7               46.8             0.5              0.5        5
          gpt-oss-120b              19.6               19.6             3.2              3.2        0
-     Llama 4 Maverick               3.4                3.4            34.0             34.0        5
+     Llama 4 Maverick               3.4                3.4            34.0             34.0       10
 Gemini 3.5 Flash Lite               1.3                1.3            31.2             31.2        1
+Outcomes changed by lenient grading, all scenarios: 16 of 17478
+
+== Replies cut off or ended by a provider error (text-only) ==
+finish                 error  length  stop
+name                                      
+Claude Haiku 5.5           0      28  1172
+Claude Opus 5.5            0       0   120
+Claude Sonnet 5.5          0       0   150
+DeepSeek V4.1 Flash        0      58  1142
+GPT-6 Luna                 2       1  3549
+GPT-6.1 Sol                0       0   600
+Gemini 3.5 Flash Lite      0       0  3552
+Llama 4 Maverick           1       0  3551
+gpt-oss-120b               3       6  3543
+Outcome of replies cut off at the length limit: {'unusable': 91, 'breaks_business_rule': 2}
 
 == Spend ==
 Text-only main run $88.93; solver $7.27; pilot $4.80 + 64k-cap pilot check $0.24

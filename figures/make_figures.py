@@ -273,7 +273,7 @@ def tab_grading():
             ["Owed premium pay", "Overtime, double time, seventh-day pay, Seattle rest-gap pay (the owner asked to avoid these)", "Fail"],
             ["Caught impossible", "Answered IMPOSSIBLE when no schedule could follow every rule", "Pass"],
             ["Said impossible wrongly", "Answered IMPOSSIBLE when a legal schedule existed", "Fail"],
-            ["No usable answer", "No schedule in the required format, or cut off at the length limit", "Fail"]]
+            ["No usable answer", "No schedule in the required format, including replies cut off at the length limit before any schedule", "Fail"]]
     return page("HOW EACH ANSWER WAS GRADED", "Code checked every answer against the rules; no AI judge",
                 table(["Outcome", "What it means", "Result"], rows, center_from=2, cls={1: "q", 2: "m"}))
 

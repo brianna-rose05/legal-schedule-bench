@@ -406,14 +406,19 @@ cat("converged warnings:", length(f@optinfo$conv$lme4$messages), "\\n")
     for mo in order:
         p = le[(le.model == mo) & le.feasible]
         st = m[(m.model == mo) & m.feasible]
+        la, sa = le[le.model == mo].set_index(KEY), m[m.model == mo].set_index(KEY)
         rows.append(dict(model=NAMES[mo], strict_legal_pct=100 * st.legal.mean(),
                          lenient_legal_pct=100 * (p.outcome == "legal").mean(),
                          strict_law_pct=100 * st.law.mean(), lenient_law_pct=100 * (p.outcome == "breaks_law").mean(),
-                         changed=int((p.set_index(KEY).outcome != st.set_index(KEY).outcome.reindex(
-                             p.set_index(KEY).index)).sum())))
+                         changed=int((la.outcome != sa.outcome.reindex(la.index)).sum())))
     sens = pd.DataFrame(rows)
     sens.to_csv(f"{OUT}/sensitivity_lenient.csv", index=False)
     say(sens.round(1).to_string(index=False))
+    say(f"Outcomes changed by lenient grading, all scenarios: {int(sens.changed.sum())} of {len(m)}")
+
+    say("\n== Replies cut off or ended by a provider error (text-only) ==")
+    say(m.groupby(["name", "finish"]).size().unstack(fill_value=0).to_string())
+    say("Outcome of replies cut off at the length limit:", m[m.finish == "length"].outcome.value_counts().to_dict())
 
     say("\n== Spend ==")
     say(f"Text-only main run ${m.cost_usd.sum():.2f}; solver ${s.cost_usd.sum():.2f}; "

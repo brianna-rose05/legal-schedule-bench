@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper below."
+title: "Can AI Build a Legal Staff Schedule? Code, scenarios and results"
+authors:
+  - family-names: Pischke
+    given-names: BriAnna
+    orcid: "https://orcid.org/0009-0003-6052-9387"
+repository-code: "https://github.com/brianna-rose05/legal-schedule-bench"
+preferred-citation:
+  type: article
+  title: "Can AI Build a Legal Staff Schedule? Labor-Law Compliance of Nine Language Models on Small-Business Weekly Scheduling"
+  authors:
+    - family-names: Pischke
+      given-names: BriAnna
+      orcid: "https://orcid.org/0009-0003-6052-9387"
+  year: 2026
+  notes: "Preprint"

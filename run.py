@@ -14,15 +14,19 @@ import requests
 
 from prompt import SYSTEM, build_prompt
 
-KEY_FILE = "/home/claude/bench/.env"
 URL = "https://openrouter.ai/api/v1/chat/completions"
 
 
 def load_key():
-    for line in open(KEY_FILE):
-        if line.startswith("OPENROUTER_API_KEY="):
-            return line.split("=", 1)[1].strip().strip('"')
-    raise SystemExit("no OpenRouter key")
+    """OpenRouter key from the OPENROUTER_API_KEY environment variable, or from a .env file in this folder."""
+    if os.environ.get("OPENROUTER_API_KEY"):
+        return os.environ["OPENROUTER_API_KEY"]
+    env = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+    if os.path.exists(env):
+        for line in open(env):
+            if line.startswith("OPENROUTER_API_KEY="):
+                return line.split("=", 1)[1].strip().strip('"')
+    raise SystemExit("no OpenRouter key: set OPENROUTER_API_KEY or copy .env.example to .env")
 
 
 def instances(kind):

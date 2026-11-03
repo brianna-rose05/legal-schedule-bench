@@ -1,0 +1,160 @@
+== Table 1. Outcomes per model (text-only condition) ==
+Claude Opus 5.5          n=  120  legal 99.0% [94.3, 99.8]     law 0.0% [0.0, 3.8]        any-violation 1.0% [0.2, 5.7]        caught-impossible 100.0% [86.2, 100.0]  premium/schedule $0 [0, 0]  cost $11.43
+Claude Sonnet 5.5        n=  150  legal 97.5% [92.9, 99.1]     law 0.0% [0.0, 3.1]        any-violation 2.5% [0.9, 7.1]        caught-impossible 100.0% [88.6, 100.0]  premium/schedule $0 [0, 0]  cost $10.33
+Claude Haiku 5.5         n= 1200  legal 91.9% [90.0, 93.5]     law 0.8% [0.4, 1.6]        any-violation 2.9% [2.0, 4.2]        caught-impossible 97.9% [95.4, 99.0]  premium/schedule $0 [0, 0]  cost $10.97
+DeepSeek V4.1 Flash      n= 1200  legal 90.2% [88.1, 92.0]     law 1.0% [0.5, 1.9]        any-violation 3.8% [2.8, 5.3]        caught-impossible 98.9% [96.9, 99.6]  premium/schedule $0 [0, 0]  cost $11.35
+GPT-6.1 Sol              n=  600  legal 59.0% [54.5, 63.3]     law 0.0% [0.0, 0.8]        any-violation 40.4% [36.1, 44.9]     caught-impossible 99.2% [95.4, 99.9]  premium/schedule $0 [0, 1]  cost $10.45
+GPT-6 Luna               n= 3552  legal 46.7% [44.8, 48.5]     law 0.5% [0.3, 0.9]        any-violation 50.7% [48.8, 52.5]     caught-impossible 96.5% [95.0, 97.6]  premium/schedule $3 [3, 4]  cost $10.71
+gpt-oss-120b             n= 3552  legal 19.6% [18.2, 21.1]     law 3.2% [2.6, 3.9]        any-violation 43.5% [41.7, 45.4]     caught-impossible 98.0% [96.8, 98.8]  premium/schedule $15 [13, 18]  cost $6.29
+Llama 4 Maverick         n= 3552  legal 3.4% [2.8, 4.2]        law 34.0% [32.2, 35.8]     any-violation 85.1% [83.7, 86.4]     caught-impossible 16.4% [14.0, 19.1]  premium/schedule $272 [241, 308]  cost $9.72
+Gemini 3.5 Flash Lite    n= 3552  legal 1.3% [0.9, 1.8]        law 31.2% [29.5, 32.9]     any-violation 82.8% [81.3, 84.1]     caught-impossible 15.9% [13.5, 18.6]  premium/schedule $355 [298, 431]  cost $7.68
+
+== H1. Breaks a law in >= 20% of schedules (possible scenarios); one-sided exact binomial, Holm ==
+Claude Opus 5.5          0/96 = 0.0%  p_holm=1
+Claude Sonnet 5.5        0/120 = 0.0%  p_holm=1
+Claude Haiku 5.5         7/918 = 0.8%  p_holm=1
+DeepSeek V4.1 Flash      9/918 = 1.0%  p_holm=1
+GPT-6.1 Sol              0/480 = 0.0%  p_holm=1
+GPT-6 Luna               15/2754 = 0.5%  p_holm=1
+gpt-oss-120b             87/2754 = 3.2%  p_holm=1
+Llama 4 Maverick         936/2754 = 34.0%  p_holm=4.3e-65
+Gemini 3.5 Flash Lite    859/2754 = 31.2%  p_holm=4.97e-43
+H1 supported: True | models significantly above 20%: Llama 4 Maverick, Gemini 3.5 Flash Lite
+
+== H2. Violation rises with level: Kendall tau-b between level and each business's violation share ==
+(one-sided, businesses as the unit, Holm across models)
+Claude Opus 5.5          L1-L5 violation %   0.0   0.0   5.6   0.0   0.0  tau=0.03 p_holm=0.456
+Claude Sonnet 5.5        L1-L5 violation %   0.0   0.0   4.2   4.2   4.2  tau=0.27 p_holm=0.195
+Claude Haiku 5.5         L1-L5 violation %   0.5   1.6   1.2   3.6   7.6  tau=0.24 p_holm=0.00129
+DeepSeek V4.1 Flash      L1-L5 violation %   0.0   1.1   1.9   1.8  13.6  tau=0.38 p_holm=2.43e-07
+GPT-6.1 Sol              L1-L5 violation %   3.7  11.5  53.6  73.3  66.7  tau=0.66 p_holm=4.6e-13
+GPT-6 Luna               L1-L5 violation %  12.2  31.5  55.3  72.6  82.8  tau=0.69 p_holm=6.96e-79
+gpt-oss-120b             L1-L5 violation %  24.7  47.8  57.0  64.1  26.7  tau=0.09 p_holm=0.0263
+Llama 4 Maverick         L1-L5 violation %  67.2  85.4  86.0  92.4  95.3  tau=0.42 p_holm=4.05e-27
+Gemini 3.5 Flash Lite    L1-L5 violation %  79.4  69.7  80.7  93.3  90.4  tau=0.24 p_holm=6.97e-10
+H2 supported: True (7 of 9 models show a significant rising trend)
+
+== RQ2. Mixed-effects logistic regression (lme4::glmer), possible scenarios ==
+any_violation ~ model + level + ruleset + format + (1 | business); reference: Claude Opus 5.5, federal, table
+business random-intercept SD: 0.4286797 
+converged warnings: 0
+(Intercept)                      OR=0.002 [0.00029, 0.0138] p=2.85e-10
+nameClaude Haiku 5.5             OR=3 [0.422, 21.3] p=0.273
+nameClaude Sonnet 5.5            OR=2.49 [0.266, 23.4] p=0.424
+nameDeepSeek V4.1 Flash          OR=3.94 [0.559, 27.8] p=0.169
+nameGPT-6 Luna                   OR=135 [19.7, 928] p=5.92e-07
+nameGPT-6.1 Sol                  OR=83.7 [12.1, 578] p=7.15e-06
+nameGemini 3.5 Flash Lite        OR=783 [114, 5.38e+03] p=1.25e-11
+nameLlama 4 Maverick             OR=946 [138, 6.5e+03] p=3.27e-12
+namegpt-oss-120b                 OR=97 [14.1, 665] p=3.22e-06
+level                            OR=1.6 [1.54, 1.67] p=7.11e-107
+rulesetcalifornia                OR=0.791 [0.712, 0.88] p=1.54e-05
+rulesetseattle                   OR=1.19 [1.07, 1.33] p=0.00134
+formatmessages                   OR=0.882 [0.808, 0.962] p=0.00474
+
+== H3. Labor-rule violation or premium pay: California / Seattle vs federal, same business and format ==
+(exact McNemar on pairs where a legal schedule exists under both rule sets; Holm across models)
+Claude Opus 5.5          california   0.0% vs federal   0.0%  (0 vs 0 discordant) p_holm=1
+Claude Opus 5.5          seattle      0.0% vs federal   0.0%  (0 vs 0 discordant) p_holm=1
+Claude Sonnet 5.5        california   0.0% vs federal   0.0%  (0 vs 0 discordant) p_holm=1
+Claude Sonnet 5.5        seattle      0.0% vs federal   0.0%  (0 vs 0 discordant) p_holm=1
+Claude Haiku 5.5         california   1.6% vs federal   0.3%  (5 vs 1 discordant) p_holm=1
+Claude Haiku 5.5         seattle      0.7% vs federal   0.3%  (1 vs 0 discordant) p_holm=1
+DeepSeek V4.1 Flash      california   1.3% vs federal   1.3%  (4 vs 4 discordant) p_holm=1
+DeepSeek V4.1 Flash      seattle      1.0% vs federal   1.3%  (2 vs 3 discordant) p_holm=1
+GPT-6.1 Sol              california   0.6% vs federal   0.0%  (1 vs 0 discordant) p_holm=1
+GPT-6.1 Sol              seattle      0.6% vs federal   0.0%  (1 vs 0 discordant) p_holm=1
+GPT-6 Luna               california   7.4% vs federal   3.8%  (63 vs 30 discordant) p_holm=0.00486
+GPT-6 Luna               seattle      7.4% vs federal   3.8%  (61 vs 28 discordant) p_holm=0.00366
+gpt-oss-120b             california  14.4% vs federal   6.2%  (122 vs 47 discordant) p_holm=5.01e-08
+gpt-oss-120b             seattle     12.9% vs federal   6.2%  (109 vs 48 discordant) p_holm=8.75e-06
+Llama 4 Maverick         california  71.2% vs federal  31.3%  (399 vs 32 discordant) p_holm=8.28e-81
+Llama 4 Maverick         seattle     50.1% vs federal  31.3%  (244 vs 71 discordant) p_holm=2.06e-22
+Gemini 3.5 Flash Lite    california  71.5% vs federal  41.5%  (347 vs 72 discordant) p_holm=2.35e-43
+Gemini 3.5 Flash Lite    seattle     57.5% vs federal  41.5%  (251 vs 104 discordant) p_holm=2.99e-14
+Models significantly higher under both California and Seattle: 4 of 9: GPT-6 Luna, gpt-oss-120b, Llama 4 Maverick, Gemini 3.5 Flash Lite
+
+== H4 / RQ4. Impossible scenarios: schedule vs 'impossible' (exact binomial, Holm) ==
+Claude Opus 5.5          said impossible 24/24 = 100.0% [86.2, 100.0], gave schedule 0, unusable 0; false 'impossible' on possible: 0.0%  p_holm(schedule>impossible)=1
+Claude Sonnet 5.5        said impossible 30/30 = 100.0% [88.6, 100.0], gave schedule 0, unusable 0; false 'impossible' on possible: 0.0%  p_holm(schedule>impossible)=1
+Claude Haiku 5.5         said impossible 276/282 = 97.9% [95.4, 99.0], gave schedule 0, unusable 6; false 'impossible' on possible: 2.1%  p_holm(schedule>impossible)=1
+DeepSeek V4.1 Flash      said impossible 279/282 = 98.9% [96.9, 99.6], gave schedule 0, unusable 3; false 'impossible' on possible: 0.0%  p_holm(schedule>impossible)=1
+GPT-6.1 Sol              said impossible 119/120 = 99.2% [95.4, 99.9], gave schedule 1, unusable 0; false 'impossible' on possible: 0.6%  p_holm(schedule>impossible)=1
+GPT-6 Luna               said impossible 770/798 = 96.5% [95.0, 97.6], gave schedule 28, unusable 0; false 'impossible' on possible: 2.4%  p_holm(schedule>impossible)=1
+gpt-oss-120b             said impossible 782/798 = 98.0% [96.8, 98.8], gave schedule 16, unusable 0; false 'impossible' on possible: 36.2%  p_holm(schedule>impossible)=1
+Llama 4 Maverick         said impossible 131/798 = 16.4% [14.0, 19.1], gave schedule 653, unusable 14; false 'impossible' on possible: 10.1%  p_holm(schedule>impossible)=1.65e-83
+Gemini 3.5 Flash Lite    said impossible 127/798 = 15.9% [13.5, 18.6], gave schedule 664, unusable 7; false 'impossible' on possible: 15.5%  p_holm(schedule>impossible)=7.46e-88
+H4 supported: False (2 of 9 models gave a schedule significantly more often)
+
+== H5 / RQ5. Solver vs text-only on the same instances ==
+Gemini 3.5 Flash Lite    violation on possible: text 86.5% -> solver 13.5% (ratio 0.16 [0.08, 0.25]) McNemar p_holm=2.94e-19
+                         legal on possible: 4.2% -> 70.8%; overall right answer 7.5% -> 59.2% (fixed 66, broke 4, p=1.65e-15)
+                         impossible caught 3, impossible unusable 21, possible unusable 13; mean runs 7.0, hit limit 43; cost text $0.27 vs solver $6.03
+GPT-6 Luna               violation on possible: text 53.8% -> solver 5.4% (ratio 0.10 [0.06, 0.16]) McNemar p_holm=6.7e-29
+                         legal on possible: 45.0% -> 90.4%; overall right answer 55.7% -> 91.7% (fixed 120, broke 12, p=1.42e-23)
+                         impossible caught 58, impossible unusable 0, possible unusable 0; mean runs 2.5, hit limit 2; cost text $0.87 vs solver $1.25
+H5 supported for: Gemini 3.5 Flash Lite, GPT-6 Luna (2 of 2)
+
+== Exploratory. Format: staff messages vs clean table (same business and rule set, exact McNemar, Holm) ==
+Claude Opus 5.5          messages   2.1% vs table   0.0% fail  p_holm=1
+Claude Sonnet 5.5        messages   3.3% vs table   1.7% fail  p_holm=1
+Claude Haiku 5.5         messages   7.0% vs table   9.2% fail  p_holm=1
+DeepSeek V4.1 Flash      messages  11.3% vs table   8.3% fail  p_holm=0.724
+GPT-6.1 Sol              messages  39.2% vs table  42.9% fail  p_holm=1
+GPT-6 Luna               messages  49.8% vs table  56.9% fail  p_holm=4.89e-05
+gpt-oss-120b             messages  79.6% vs table  81.2% fail  p_holm=1
+Llama 4 Maverick         messages  96.2% vs table  96.9% fail  p_holm=1
+Gemini 3.5 Flash Lite    messages  99.2% vs table  98.2% fail  p_holm=0.194
+
+== Exploratory. Share of returned schedules (possible scenarios) with each violation type ==
+                       schedules  coverage  double_time  duplicate  meal_missed  minor_daily  minor_school_hours  minor_time  minor_weekly  over_max_hours  overtime_daily  overtime_weekly  rest_gap  seventh_day  two_shifts_one_day  unavailable  unknown_id  wrong_role
+name                                                                                                                                                                                                                                                                       
+Claude Opus 5.5               96       0.0          0.0        0.0          0.0          0.0                 0.0         0.0           0.0             0.0             0.0              0.0       0.0          0.0                 0.0          1.0         0.0         0.0
+Claude Sonnet 5.5            120       0.0          0.0        0.0          0.0          0.0                 0.0         0.0           0.0             0.8             0.0              0.0       0.0          0.0                 0.0          2.5         0.0         0.8
+Claude Haiku 5.5             871       0.7          0.1        0.2          0.1          0.0                 0.0         0.0           0.7             0.9             0.2              0.0       0.0          0.0                 0.2          1.5         0.0         0.3
+DeepSeek V4.1 Flash          863       0.1          0.0        0.0          0.0          0.0                 0.0         0.0           1.0             1.9             0.0              0.2       0.0          0.0                 0.0          1.5         0.0         0.0
+GPT-6.1 Sol                  477       0.0          0.2        0.0          0.0          0.0                 0.0         0.0           0.0             0.4             0.2              0.0       0.2          0.0                 0.2         40.5         0.0         0.0
+GPT-6 Luna                  2680       5.7          1.0        1.0          0.1          0.1                 0.1         0.1           0.3            28.8             1.4              3.4       1.6          0.1                 4.1         34.3         0.0         2.4
+gpt-oss-120b                1738      29.4          4.1        1.4          3.0          1.2                 0.5         1.3           0.7            31.2             6.6              6.8       4.7          0.3                17.1         60.9         0.1        10.4
+Llama 4 Maverick            2437      56.8         16.5        1.6         24.8         24.9                17.8        15.8           9.2            77.6            25.6             17.7      12.6          0.9                55.8         88.2         0.2        42.8
+Gemini 3.5 Flash Lite       2315      64.4         20.5        1.5         25.9         21.6                18.7        12.7          12.3            82.5            26.9             34.8      16.0          2.2                69.3         95.4         0.5        56.1
+
+== Exploratory. Rules in focus, as a share of returned schedules (possible scenarios) ==
+                model  teen_rule_broken_levels3to5  meal_missed_california  outside_availability  over_own_max_hours  level5_false_impossible  legal_cost_over_cheapest_median_pct
+      Claude Opus 5.5                          0.0                     0.0                   1.0                 0.0                      0.0                                  4.2
+    Claude Sonnet 5.5                          0.0                     0.0                   2.5                 0.8                      0.0                                  4.4
+     Claude Haiku 5.5                          1.2                     0.3                   1.5                 0.9                      1.0                                  3.8
+  DeepSeek V4.1 Flash                          1.9                     0.0                   1.5                 1.9                      0.0                                  4.0
+          GPT-6.1 Sol                          0.0                     0.0                  40.5                 0.4                      2.9                                  3.0
+           GPT-6 Luna                          0.9                     0.2                  34.3                28.8                      8.8                                  3.8
+         gpt-oss-120b                          5.3                    10.1                  60.9                31.2                     72.5                                  3.2
+     Llama 4 Maverick                         43.6                    76.0                  88.2                77.6                      2.5                                  4.4
+Gemini 3.5 Flash Lite                         37.1                    82.7                  95.4                82.5                      9.3                                  4.1
+
+== Exploratory. Outcome shares by rule set (possible scenarios) ==
+ruleset                california  federal  seattle
+name                                               
+Claude Opus 5.5               0.0      3.1      0.0
+Claude Sonnet 5.5             2.5      5.0      0.0
+Claude Haiku 5.5              5.9      8.8      9.5
+DeepSeek V4.1 Flash           5.2      8.2     16.0
+GPT-6.1 Sol                  36.9     39.4     46.9
+GPT-6 Luna                   53.4     48.3     58.4
+gpt-oss-120b                 79.3     78.5     83.3
+Llama 4 Maverick             96.1     95.6     98.0
+Gemini 3.5 Flash Lite        98.7     98.3     99.1
+
+== Sensitivity. Lenient grading (names accepted for IDs; SHIFT,EMPLOYEE order accepted) ==
+                model  strict_legal_pct  lenient_legal_pct  strict_law_pct  lenient_law_pct  changed
+      Claude Opus 5.5              99.0               99.0             0.0              0.0        0
+    Claude Sonnet 5.5              97.5               97.5             0.0              0.0        0
+     Claude Haiku 5.5              91.9               91.9             0.8              0.8        0
+  DeepSeek V4.1 Flash              90.2               90.2             1.0              1.0        0
+          GPT-6.1 Sol              59.0               59.0             0.0              0.0        0
+           GPT-6 Luna              46.7               46.8             0.5              0.5        5
+         gpt-oss-120b              19.6               19.6             3.2              3.2        0
+     Llama 4 Maverick               3.4                3.4            34.0             34.0        5
+Gemini 3.5 Flash Lite               1.3                1.3            31.2             31.2        1
+
+== Spend ==
+Text-only main run $88.93; solver $7.27; pilot $4.80 + 64k-cap pilot check $0.24

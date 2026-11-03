@@ -14,4 +14,7 @@ preferred-citation:
       given-names: BriAnna
       orcid: "https://orcid.org/0009-0003-6052-9387"
   year: 2026
-  notes: "Preprint"
+  publisher:
+    name: Zenodo
+  doi: "10.5281/zenodo.23909614"
+  url: "https://doi.org/10.5281/zenodo.23909614"

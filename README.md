@@ -1,8 +1,10 @@
 # Can AI Build a Legal Staff Schedule?
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23909614.svg)](https://doi.org/10.5281/zenodo.23909614)
+
 **Code, scenarios, answer key and full results for a study of whether AI models can build weekly staff schedules that follow U.S. labor rules**
 
-📄 **Paper (preprint):** *Can AI Build a Legal Staff Schedule? Labor-Law Compliance of Nine Language Models on Small-Business Weekly Scheduling* (DOI to follow)
+📄 **Paper (preprint, PDF):** [doi.org/10.5281/zenodo.23909614](https://doi.org/10.5281/zenodo.23909614) · [PDF in this repo](paper/Pischke_2026_Can_AI_Build_a_Legal_Staff_Schedule.pdf)
 
 Nine models were asked to build one week's staff schedule for fictional cafés, retail shops and quick-service restaurants, or to answer `IMPOSSIBLE` when no schedule could follow every rule. The 592 businesses span five difficulty levels. Each one was run under three rule sets (federal only, California, Seattle chain store) and in two formats (a clean availability table, or casual text messages from staff): **3,552 scenarios, 17,478 graded answers.** A constraint solver supplied the answer key, and every answer was graded by code, not by another AI.
 
@@ -69,6 +71,7 @@ grade.py               grades every reply in a results folder -> graded.csv
 analysis.py            every statistic in the paper -> results/analysis/
 tests/test_checker.py  59 grader tests: one planted violation per rule per rule set
 PREREGISTRATION.md     hypotheses and analysis plan, committed before the main run
+paper/                 the preprint (PDF)
 figures/               graphics for every result (make_figures.py rebuilds them)
 scenarios/
   businesses.json      600 businesses: staff, availability (table and messages), shifts
@@ -124,14 +127,16 @@ python3 analysis.py
 
 ## Citation
 
-> Pischke, B. (2026). *Can AI Build a Legal Staff Schedule? Labor-Law Compliance of Nine Language Models on Small-Business Weekly Scheduling*. Preprint.
+> Pischke, B. (2026). *Can AI Build a Legal Staff Schedule? Labor-Law Compliance of Nine Language Models on Small-Business Weekly Scheduling*. Zenodo. https://doi.org/10.5281/zenodo.23909614
 
 ```bibtex
 @misc{pischke2026legalschedule,
-  author = {Pischke, BriAnna},
-  title  = {Can AI Build a Legal Staff Schedule? Labor-Law Compliance of Nine Language Models on Small-Business Weekly Scheduling},
-  year   = {2026},
-  note   = {Preprint},
-  url    = {https://github.com/brianna-rose05/legal-schedule-bench}
+  author    = {Pischke, BriAnna},
+  title     = {Can AI Build a Legal Staff Schedule? Labor-Law Compliance of Nine Language Models on Small-Business Weekly Scheduling},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23909614},
+  url       = {https://doi.org/10.5281/zenodo.23909614},
+  note      = {Preprint}
 }
 ```
